@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 morse_decoder
 =============
 After forking/cloning the repository:<br>
@@ -13,3 +14,7 @@ After forking/cloning the repository:<br>
 morse_decode
 ============
 >>>>>>> 17b7538f0d86c607a9c5fbd52762bcbdf34f1c6b
+=======
+morse_decoder
+=============
+>>>>>>> e31af4a5cdf1e83b7a0420c7021c53e6a2a23702
