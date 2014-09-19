@@ -1,0 +1,25 @@
+<%= form_for(@morse_code) do |f| %>
+  <% if @morse_code.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@morse_code.errors.count, "error") %> prohibited this morse_code from being saved:</h2>
+
+      <ul>
+      <% @morse_code.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %><br>
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :translation %><br>
+    <%= f.text_field :translation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<div>(Each code should be separated by space and use "/" after each word)
+  <br>
+  <br>
+  Enter morse code:
+
+  <%= form_tag morse_codes_translate_path, :method => :get do %>
+      <strong><%= label_tag :user_input %></strong>
+      <%= text_field_tag :user_input %>
+
+      <div class = "margin"><%= submit_tag 'Translate' %></div>
+  <% end %>
+
+</div>
+
+<div><strong>Translation: </strong><%= @translation %></div>
+
+<%= link_to 'Back', morse_codes_path %>

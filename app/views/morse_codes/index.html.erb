@@ -1,0 +1,30 @@
+<h1><div><%= link_to 'Translate Codes', morse_codes_translate_path %></div></h1>
+
+<h2><div><%= link_to 'Create New Morse code', new_morse_code_path %></div></h2>
+
+<h3>List of Morse Codes</h3>
+<table class = "align">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Translation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @morse_codes.each do |morse_code| %>
+      <tr>
+        <td><%= morse_code.code %></td>
+        <td><%= morse_code.translation %></td>
+        <td><%= link_to 'Show', morse_code %></td>
+        <td><%= link_to 'Edit', edit_morse_code_path(morse_code) %></td>
+        <td><%= link_to 'Destroy', morse_code, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
