@@ -62,11 +62,8 @@ class MorseCodesController < ApplicationController
   end
 
   def translate
-    # This is the user input in textbox. Remember, params is the default hash input in rails
-    # Get params hash where key is equal to :user_input (Check translate.html.erb)
     user_input = params[:user_input]
 
-    # Call translate_me method of MorseCode model
     @translation = MorseCode.translate_me(user_input) if user_input.present?
   end
 
